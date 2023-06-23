@@ -1,0 +1,189 @@
+/* stylesheet.css */
+
+/* 
+
+The Screen size the website was made for is 1920x1080
+Ive tryed to make it work as best as i could for smaller/bigger screen sizes
+Bit clunky on phone but works
+
+*/
+
+body {
+  background-image: url("img/background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  max-width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.card1 {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 1200px;
+  max-width: 100%;
+  height: 500px;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  border: 2px solid rgb(95, 100, 96);
+  border-radius: 10px;
+}
+
+
+.title {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 70px;
+  font-family: 'Righteous', cursive;
+  animation: fadeIn 4s ease-in-out;
+}
+
+.cardTitle {
+  color: black;
+  text-align: center;
+  font-size: 50px;
+  text-decoration: underline;
+  opacity: 0;
+  animation: fadeInAnimation 2s ease-in-out forwards;
+  font-family: 'Righteous', cursive;
+}
+
+.cardtext1 {
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInAnimation 4s ease-in-out forwards;
+}
+
+.moveAlong1 {
+  animation: fadeInAnimation 4s ease-in-out forwards;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin-top: -5vh;
+  animation: slideIn 2s ease-in-out;
+  border: 2px solid rgb(95, 100, 96);
+  border-radius: 10px;
+}
+
+.navigation a {
+  margin: 0 10px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  margin: 0 2px;
+  border-radius: 50%;
+  background-color: #43922b;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #fbff00;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.social {
+  position: relative;
+  width: 200;
+  height: 100vh;
+}
+
+.box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #ccc;
+  padding: 10px;
+  z-index: 9999;
+  border-radius: 20%;
+}
+
+.right-arrow,
+.left-arrow {
+  transition: transform 0.5s ease-in-out;
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: slideIn 1s ease-in-out;
+}
+
+.fadeIn:not(.active) {
+  opacity: 1;
+}
+
+.slide-out {
+  transform: translateX(100%);
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 4vw;
+  }
+
+  .card1 {
+    font-size: 8px;
+  }
+
+  .navigation {
+    margin-top: -5vh;
+  }
+
+  .cardtext1 {
+    font-size: 9px;
+  }
+}
